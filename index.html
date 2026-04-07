@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Алеся Петровская</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-gradient">
+            <img src="img/foto.png" alt="аватар" class="avatar">
+    <h1>Алеся Петровская</h1>
+    <p class="title">Frontend-разработчик</p>
+
+  </header>
+  <nav>
+    <ul>
+        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="#about">О себе</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#code">Пример кода</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#languages">Языки</a></li>
+    </ul>
+  </nav>
+
+   <main class="content">
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <div class="contacts-grid">
+            <div class="contact-card">✉<a href="#">petrovskaya_alesya98@mail.ru</a></div>
+            <div class="contact-card">💻<a href="https://github.com/Alesya98" target="_blank" rel="noopener noreferrer">GitHub: Alesya98</a></div>
+            <div class="contact-card">📱<a href="https://t.me/alesyapeatrovskaya" target="_blank" rel="noopener noreferrer">Telegram: @alesyapetrovskaya</a></div>
+            <div class="contact-card">📍 Светлогорск, Беларусь</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>О себе</h2>
+        <p style="margin-top: 14px; background-color: #f7fafc; padding: 16px; border-radius: 12px;">
+            Я начинающий фронтенд-разработчик, увдечённая созданием удобных и красивых интерфейсов.
+            Сейчас прохожу обучение в RS School, чтобы систематизировать свои знания и получить практический опыт.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Навыки</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Языки и технологии</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript(ES6+)</li>
+                    <li>React</li>
+                    <li>Redux + RTK</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Инструменты</h3>
+                <ul>
+                    <li>Git / GitHub</li>
+                    <li>VS Code</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Концепции</h3>
+                <ul>
+                    <li>BEM-методология</li>
+                    <li>DOM</li>
+                    <li>Ant Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Пример кода</h2>
+        <div class="code-block">
+            <pre><code> function solve(arr){ 
+                return arr
+                .sort((a,b) => a- b) 
+                .reduce((acc, item) => { 
+                    if(acc.length > 0 && acc[acc.length - 1][0] === item) { 
+                        acc[acc.length - 1].push(item) 
+                    } else { 
+                        acc.push([item]) }
+                         return acc }, []) 
+                         .sort((a, b) => b.length - a.length)
+                         .flat(1) }
+            </code></pre>
+        </div>
+        <p style="margin-top: 8px; font-size: 13px; color: #718096;">Функция группирует одинаковые элементы в массиве и возвращает массив, отсортированный по частоте повторений</p>
+    </section>
+
+    <section id="education">
+        <h2>Образование</h2>
+        <div class="education-item">
+            <h3>RS School</h3>
+            <p>Курс 'JavaScript/Front-end' - в процессе обучения</p>
+        </div>
+        <div class="education-item">
+            <h3>Redev</h3>
+            <p>Курс 'JavaScript/HTML/CSS/React' - завершён</p>
+        </div>
+    </section>
+
+    <section id="languages">
+        <h2>Языки</h2>
+        <div class="skills-grid" style="margin-top: 12px;">
+            <h3>Русский</h3>
+            <p>Родной</p>
+        </div>
+        <div class="skills-grid" style="margin-top: 12px;">
+            <h3>English</h3>
+            <p>A2 (Elementary) - продолжаю изучение</p>
+        </div>
+    </section>
+</main>
+        <footer>
+            <div class="footer-links">
+                <a href="https://github.com/Alesya98" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span>&copy; 2022 Алеся Петровская</span>
+                <a href="https://rs.school/courses/javascript-preschool-ru" target="_blank" rel="noopener noreferrer" class="rs-logo">
+                    <img src="img/rs-school-logo.svg" alt="RS School Logo" width="45" height="45">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
