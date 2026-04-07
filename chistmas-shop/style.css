@@ -387,6 +387,9 @@ html {
     flex: 1;
     border-radius: 20px;
     cursor: pointer;
+    transition: color 0.3s ease;
+    width: 340px;
+    flex-shrink: 0;
 }
 
 .contact a {
@@ -404,6 +407,16 @@ html {
     font-size: 16px;
     line-height: 152%;
     text-transform: uppercase;
+}
+
+.link-footer {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.link-footer:hover p {
+    color: #FF4646;
 }
 
 .footer-bottom {
@@ -548,13 +561,18 @@ html {
         align-items: stretch;
     }
 
+    .contact {
+        width: 100%;
+    }
+
     a,
     button,
     .nav a:hover,
     .hero_btn:hover,
     .cta-block a:hover,
     .gifts-page__item:hover,
-    .product-card:hover h3   {
+    .product-card:hover h3,
+    .link-footer:hover p    {
         color: inherit;
         background-color: inherit;
         border-radius: none;
