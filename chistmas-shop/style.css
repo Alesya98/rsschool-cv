@@ -430,10 +430,18 @@ html {
     margin-bottom: 12px;
 }
 
+.social-link:hover svg path {
+    stroke: #FF4646
+}
+
 .signature {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.signature:hover a {
+    color: #FF4646;
 }
 
 /* Gifs */
@@ -572,7 +580,9 @@ html {
     .cta-block a:hover,
     .gifts-page__item:hover,
     .product-card:hover h3,
-    .link-footer:hover p    {
+    .link-footer:hover p,
+    .signature:hover a,
+    .social-link:hover svg path    {
         color: inherit;
         background-color: inherit;
         border-radius: none;
@@ -625,5 +635,7 @@ html {
     }
         
 }
+
+/* сделать ссылки в футоре как в макете */
 
 
