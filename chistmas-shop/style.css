@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     background: #fff
 }
 
@@ -39,6 +39,10 @@ html {
     display: flex;
     align-items: center;
     padding: 12px 20px;
+}
+
+.burger-menu {
+    display: none;
 }
 
 .nav {
@@ -138,6 +142,10 @@ html {
     text-align: start; 
 }
 
+ .about__block span {
+ color: #FF4646;
+ }
+
 .about__text h2 {
     text-align: left;
     font-weight: 600;
@@ -187,6 +195,7 @@ html {
     gap: 20px;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -225,15 +234,29 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
+    justify-content: center;
 }
 
 .card {
+    height: 100%;
    background-color: #ECF3F8;
    border-radius: 20px;
    display: flex;
   flex-direction: column;
   cursor: pointer;
+  transition: 0.3s ease;
 } 
+
+.product-card {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.product-card:hover h3, 
+.product-card:hover h2 {
+    color: #FF4646
+}
 
 .card-info {
     background-color: #fff;
@@ -428,14 +451,26 @@ html {
     justify-content: center;
 }
 
+.gifts-page__item:first-child {
+     background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    cursor: inherit;
+}
+
 .gifts-page__item {
     padding: 12px 20px;
     font-weight: 600;
     font-size: 12px;
     line-height: 130%;
     text-transform: uppercase;
+    transition: 0.2s ease-out;
+    cursor: pointer;
 }
 
+.gifts-page__item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
 
 .cards__gifts {
      grid-template-rows: repeat(3, auto);
@@ -445,6 +480,132 @@ html {
     background-color: transparent;
     color: inherit;
     cursor: default;
+}
+
+@media (max-width: 1290px) {
+    .cards {
+            grid-template-columns: repeat(2, minmax(auto, 310px));
+            justify-content: center; 
+    }
+
+       .card {
+        flex: 1 1 280px;
+        min-width: 250px;
+    }
+
+}
+
+@media (max-width: 950px) {
+ .about__text img {
+        max-width: 376px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 768px;
+        padding: 60px 8px;
+        width: 100%;
+    }
+
+    .header__inner {
+       padding: 8px 12px; 
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hero_container {
+        background-size: cover;
+    }
+
+
+    .swipper {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+
+    .card-info {
+            padding: 20px 20px 32px 44px;
+    }
+
+    .cta-inner {
+        background-position: bottom center, center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    a,
+    button,
+    .nav a:hover,
+    .hero_btn:hover,
+    .cta-block a:hover,
+    .gifts-page__item:hover,
+    .product-card:hover h3   {
+        color: inherit;
+        background-color: inherit;
+        border-radius: none;
+        cursor: default;
+    }
+
+}
+
+@media(max-width:610px) {
+      .about__text {
+        flex-direction: column;
+    }
+
+    .about__block {
+        padding: 60px 20px;
+    }
+
+    .about__block img {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 525px) {
+   .cards {
+        grid-template-columns: 310px;
+    }
+
+       .card {
+        flex: 1 1 280px;
+        min-width: 250px;
+    }
+}
+
+@media (max-width:380px) {
+    .container {
+        max-width: 380px;
+    }
+
+    .hero_container {
+    background-size: cover;
+    }
+
+
+    .cta-inner {
+        background-size: cover;
+    }
+
+    .gifts-page__item {
+        padding: 12px 8px;
+    }
+        
 }
 
 
